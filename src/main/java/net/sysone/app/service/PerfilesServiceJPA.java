@@ -12,7 +12,7 @@ public class PerfilesServiceJPA implements IPerfilesService {
 
 	@Override
 	public void guardar(Perfil perfil) {
-		// pruebo gitlab
+		// pruebo gitlab v2
 		repository.save(perfil);
 	}
 
