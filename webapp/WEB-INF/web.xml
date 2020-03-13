@@ -40,16 +40,6 @@
 		</param-value>
 	</context-param>
 	
-<!-- 	Spring Security Filter -->
-	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	
 	<error-page>
        	<error-code>404</error-code>
        	<location>/WEB-INF/views/error/404.jsp</location>
@@ -69,5 +59,41 @@
 		<error-code>500</error-code>
 		<location>/WEB-INF/views/error/500.jsp</location>
 	</error-page>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>URLs protegidas solo para el rol Editor</web-resource-name>
+			<!-- Define the context-relative URL(s) to be protected -->
+			<url-pattern>/horarios/*</url-pattern>
+			<url-pattern>/noticias/*</url-pattern>
+			<url-pattern>/peliculas/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<!-- Anyone with this role may access this area -->
+			<role-name>editor</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>URLs protegidas solo para el rol Gerente</web-resource-name>
+			<!-- Define the context-relative URL(s) to be protected -->
+			<url-pattern>/horarios/*</url-pattern>
+			<url-pattern>/noticias/*</url-pattern>
+			<url-pattern>/peliculas/*</url-pattern>
+			<url-pattern>/banners/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<!-- Anyone with this role may access this area -->
+			<role-name>gerente</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+<!-- 	login básico de java -->
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+	
+
 	
 </web-app>
