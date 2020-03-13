@@ -12,3 +12,5 @@ RemoteSystemsTempFiles/
 */\.project
 .project
 
+.classpath
+target/
