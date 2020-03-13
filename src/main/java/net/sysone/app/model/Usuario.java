@@ -17,7 +17,7 @@ public class Usuario {
 	private String cuenta;
 	private String pwd;
 	private int activo;
-	private String mail;
+	private String email;
 	private String telefono;
 
 	public int getId() {
@@ -52,12 +52,12 @@ public class Usuario {
 		this.activo = activo;
 	}
 
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getTelefono() {
@@ -70,7 +70,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", cuenta=" + cuenta + ", pwd=" + pwd + ", activo=" + activo + ", mail=" + mail
+		return "Usuario [id=" + id + ", cuenta=" + cuenta + ", pwd=" + pwd + ", activo=" + activo + ", email=" + email
 				+ ", telefono=" + telefono + "]";
 	}
 
