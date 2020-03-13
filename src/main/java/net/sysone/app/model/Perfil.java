@@ -10,6 +10,18 @@ import javax.persistence.Table;
 @Table(name = "Perfiles")
 public class Perfil {
 
+	
+	
+	public Perfil() {
+		super();
+	}
+
+	public Perfil(String cuenta, String perfil) {
+		super();
+		this.cuenta = cuenta;
+		this.perfil = perfil;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
