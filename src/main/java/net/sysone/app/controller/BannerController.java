@@ -34,6 +34,7 @@ public class BannerController {
 		List<Banner> listaBanners = service.buscarTodos();
 		
 		model.addAttribute("banners", listaBanners);
+//		comentario
 		
 		return "banners/listBanners";
 	}
