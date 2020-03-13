@@ -67,6 +67,7 @@
 			<url-pattern>/horarios/*</url-pattern>
 			<url-pattern>/noticias/*</url-pattern>
 			<url-pattern>/peliculas/*</url-pattern>
+			<url-pattern>/admin/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<!-- Anyone with this role may access this area -->
@@ -82,6 +83,7 @@
 			<url-pattern>/noticias/*</url-pattern>
 			<url-pattern>/peliculas/*</url-pattern>
 			<url-pattern>/banners/*</url-pattern>
+			<url-pattern>/admin/*</url-pattern>
 		</web-resource-collection>
 		<auth-constraint>
 			<!-- Anyone with this role may access this area -->
@@ -90,10 +92,18 @@
 	</security-constraint>
 	
 <!-- 	login básico de java -->
-	<login-config>
-		<auth-method>BASIC</auth-method>
-	</login-config>
+<!-- 	<login-config> -->
+<!-- 		<auth-method>BASIC</auth-method> -->
+<!-- 	</login-config> -->
 	
-
+	
+<!-- 	login con html creado por mí -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/WEB-INF/views/formLogin.jsp</form-login-page>
+			<form-error-page>/WEB-INF/views/formError.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
 	
 </web-app>
