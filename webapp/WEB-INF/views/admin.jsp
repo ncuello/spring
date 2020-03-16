@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Error</title>    
+    <title>My CineSite</title>    
     <spring:url value="/resources" var="urlPublic"></spring:url>
 
     <link href="${urlPublic}/bootstrap/css/bootstrap.min.css" rel="stylesheet">   
@@ -24,7 +24,7 @@
 
       <div class="jumbotron">        
         <h3>Administración del Sistema</h3>
-        <p>Bienvenido(a) ${usuario} </p>
+        <p>Bienvenido(a) ${usuario.name} </p>
       </div>
 
       <!-- FOOTER -->
